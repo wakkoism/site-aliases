@@ -29,11 +29,9 @@ class SiteList
   }
   public function fetchList()
   {
-
     $this->files = array_unique($this->files);
-
+    $aliases = array();
     foreach ($this->files as $file) {
-
       include_once $this->filepath . '/' . $file;
       $this->aliases = array_merge($this->aliases, $aliases);
     }
@@ -44,7 +42,6 @@ class SiteList
     $localhost = gethostname();
     $output = '';
     $aliases = $this->fetchList();
-
     foreach ($aliases as $key => $alias) {
       if (!isset($alias['remote-host']) && isset($alias['path-aliases']['%site'])) {
         $output .= $key . '|' . $alias['root'] . '/' . $alias['path-aliases']['%site'] . "\n";
