@@ -4,7 +4,9 @@ require_once('/opt/httpd/htdocs/bonnier_drupal_shared_assets/drush_config/aliase
 
 class LocalBuildDrushAliases extends BonnierBuildDrushAliases
 {
-  public function __construct($url = 'http://dev-sitelist.bonniercorp.local/api/sites?format=drush_aliases') {
+  public function __construct($url = 'http://dev-sitelist.bonniercorp.local/api/sites?format=drush_aliases')
+  {
+    // $this->setTryToStripRemoteHosts(false);
     parent::__construct($url);
   }
 }
