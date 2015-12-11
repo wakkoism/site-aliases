@@ -1,0 +1,7 @@
+san.local|/var/www/local.sandcastle.bonniercorp.com/public/sites/sandcastle.bonniercorp.com/
+sav.local|/var/www/local-www.saveur.com/public/sites/saveur.com/
+fas.local|/var/www/local-www.fieldandstream.com/public/sites/fieldandstream.com/
+out.local|/var/www/local-www.outdoorlife.com/public/sites/outdoorlife.com/
+spr.local|/var/www/local-www.sportrider.com/public/sites/sportrider.com/
+dri.local|/var/www/local-www.dirtrider.com/public/sites/dirtrider.com/
+mcr.local|/var/www/local-www.motorcyclecruiser.com/public/sites/motorcyclecruiser.com/
