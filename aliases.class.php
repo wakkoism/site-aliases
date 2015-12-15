@@ -1,5 +1,5 @@
 <?php
-require_once('/opt/httpd/htdocs/bonnier_drupal_shared_assets/drush_config/aliases.drushrc.php');
+require_once('/opt/httpd/htdocs/bonnier_drupal_shared_assets/drush_config/aliases.drushrc.class.php');
 
 
 class LocalBuildDrushAliases extends BonnierBuildDrushAliases
