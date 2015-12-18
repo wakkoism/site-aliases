@@ -13,7 +13,7 @@ if (!empty($drush_aliases)) {
 }
 else{
   $aliases = new LocalBuildDrushAliases();
-  
+
   $aliases = $GLOBALS['bonnier_drush_aliases'] = $aliases->getAliases();
   $memcache->set('drush_aliases', $aliases, 0, 3600 * 24);
 }
