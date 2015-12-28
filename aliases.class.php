@@ -1,4 +1,5 @@
 <?php
+require_once('aliases.settings.php');
 $path = '/opt/httpd/htdocs/bonnier_drupal_shared_assets/drush_config/includes/';
 require_once($path . 'DrushAliasesCache.interface.php');
 require_once($path . 'DrushAliasesCacheMemcache.class.php');
@@ -30,7 +31,7 @@ if (!$already_run) {
   // If memcache is not working, you can use a file on disk for cache storage.
   //$cache = new DrushAliasesCacheFile('/tmp/drush-aliases.cache');
 
-  $cache = new DrushAliasesCacheMemcache();
+  $cache = new DrushAliasesCacheMemcache(MEMCACHE_DRUSH_ALIASES, 0);
   $url = 'http://sitelist.bonniercorp.local/api/sites?format=drush_aliases';
   $aliasBuilder = new BonnierBuildDrushAliases($url, $cache);
 

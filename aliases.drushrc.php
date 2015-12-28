@@ -1,11 +1,9 @@
 <?php
-
-$settings['memcache'] = array('unix:///var/run/memcached/memcached_sitelist.sock');
-
+require_once('aliases.settings.php');
 require_once('aliases.class.php');
 
 $memcache = new Memcache();
-$memcache->addServer($settings['memcache'][0], 0);
+$memcache->addServer(MEMCACHE_DRUSH_ALIASES, 0);
 $drush_aliases = $memcache->get('drush_aliases');
 
 if (!empty($drush_aliases)) {
