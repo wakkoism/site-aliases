@@ -3,7 +3,8 @@
 - Create a symlink alias to ~/.drush using ln -s ~/.drush/aliases.drushrc.php path/to/this/aliases.drushrc.php
 - Create a ~/.drush/local.aliases.drushrc.php
 - Add in entry
-  ```
+  ```php
+  <?php
     $alises['example.local'] = array(
       'root' => '/var/www/local.sandcastle.example.com/public',
       'uri' => 'http://www.example.com',
