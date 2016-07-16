@@ -30,11 +30,9 @@ if ($already_run) {
 if (!$already_run) {
   // If memcache is not working, you can use a file on disk for cache storage.
   //$cache = new DrushAliasesCacheFile('/tmp/drush-aliases.cache');
-
-  $cache = new DrushAliasesCacheMemcache(MEMCACHE_DRUSH_ALIASES, 0);
-  $url = 'http://sitelist.bonniercorp.local/api/sites?format=drush_aliases';
+  $cache = new DrushAliasesCacheMemcache(MEMCACHE_DRUSH_ALIASES, MEMCACHE_PORT_DRUSH_ALIASES);
+  $url = SITELIST_URL;
   $aliasBuilder = new BonnierBuildDrushAliases($url, $cache);
-
   $aliases = $GLOBALS['bonnier_drush_aliases'] = $aliasBuilder->getAliases();
 }
 
